@@ -62,7 +62,6 @@ textarea:focus {
   margin-bottom: 2rem;
   text-align: center;
   border-radius: 1rem;
-  box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
 
@@ -487,7 +486,7 @@ textarea:focus {
   display: none;
 }
 
-.glazing a.active {
+.glazing .active a { /*been error selector*/
   text-decoration: none;
   color: #454545;
 }
@@ -692,20 +691,20 @@ textarea:focus {
   color: black;
   border-radius: 10px;
   text-align: center;
-  max-width: 360px;
+  width: 360px;
   height: 150px;
 }
 
 .container1 {
   display: inline-block;
+
 }
 .numbers1 {
   display: block;
-  float: left;
+  float: left;  
   color: white;
-  font-size: 38px;
-  margin-right: 5px;
-  margin-left: 5px;
+  font-size: 40px;
+  margin-right: 10px;
 }
 
 .timer1 span{
@@ -1804,6 +1803,9 @@ textarea:focus {
     padding: 1rem 5rem;
   }
 }
+
+/* name my animation*/
+@keyframes fade{from{opacity: 0.1;}to{opacity: 1;}}
 
 /* small devices, tablets */
 @media only screen and (max-width: 768px) {
