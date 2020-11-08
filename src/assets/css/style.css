@@ -62,7 +62,6 @@ textarea:focus {
   margin-bottom: 2rem;
   text-align: center;
   border-radius: 1rem;
-  -moz-box-sizing: border-box;
 }
 
 .form_input::-webkit-input-placeholder {
@@ -1802,7 +1801,16 @@ textarea:focus {
   .popup_calc_profile_button {
     padding: 1rem 5rem;
   }
-}
+
+  .timer1 {
+    width: 290px;
+  }
+  .numbers1 {
+    margin-right: 5px;
+    margin-right: 5px;
+    font-size: 38px;
+  }
+} /*end 530*/
 
 /* small devices, tablets */
 @media only screen and (max-width: 768px) {

@@ -485,7 +485,7 @@ textarea:focus {
   display: none;
 }
 
-.glazing .active a { /*been error selector*/
+.glazing a.active {
   text-decoration: none;
   color: #454545;
 }
@@ -1801,10 +1801,16 @@ textarea:focus {
   .popup_calc_profile_button {
     padding: 1rem 5rem;
   }
-}
 
-/* name my animation*/
-@keyframes fade{from{opacity: 0.1;}to{opacity: 1;}}
+  .timer1 {
+    width: 290px;
+  }
+  .numbers1 {
+    margin-right: 5px;
+    margin-right: 5px;
+    font-size: 38px;
+  }
+} /*end 530*/
 
 /* small devices, tablets */
 @media only screen and (max-width: 768px) {
