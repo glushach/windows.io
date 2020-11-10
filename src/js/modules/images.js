@@ -4,7 +4,7 @@ const images = () => {
         bigImage = document.createElement('img'),
         workSection = document.querySelector('.works'),
         imgPopup = document.createElement('div');
-  console.log(widthBody);
+
 
   if(widthBody > 767) {
     imgPopup.classList.add('popup');
