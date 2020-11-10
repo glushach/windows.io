@@ -1811,7 +1811,7 @@ textarea:focus {
   }
   /*my class*/
   .timer1 {
-    width: 290px;
+    width: 100%;
   }
   .numbers1 {
     margin-right: 5px;
