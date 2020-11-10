@@ -1096,6 +1096,12 @@ textarea:focus {
 
 /*My animation*/
 @keyframes fade{from{opacity: 0.1;}to{opacity: 1;}}
+/*My class*/
+.popup_modal > img {
+  width: 588px;
+  height: 540px;
+  object-fit: cover;
+}
 /*Media*/
 @media (max-width: 1400px) {
   .main {
