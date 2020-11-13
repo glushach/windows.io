@@ -17808,7 +17808,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener('DOMContentLoaded', function () {
-  "use strict";
+  "use strict"; //automatic page reload
+  // let oldWidth = window.innerWidth;
+  // window.onresize = function() {
+  //   let newWidth = window.innerWidth;
+  //   if(newWidth != oldWidth) {
+  //     document.location.reload();
+  //   }
+  // }
 
   var modalState = {};
   Object(_modules_changeModalState__WEBPACK_IMPORTED_MODULE_4__["default"])(modalState);
@@ -18110,7 +18117,8 @@ var modals = function modals() {
     var trigger = document.querySelectorAll(triggerSelector),
         modal = document.querySelector(modalSelector),
         close = document.querySelector(closeSelector),
-        windows = document.querySelectorAll('[data-modal]'); //CLICK ON TRIGGER - OPEN MODAL
+        windows = document.querySelectorAll('[data-modal]'),
+        scroll = calcScroll(); //CLICK ON TRIGGER - OPEN MODAL
 
     trigger.forEach(function (item) {
       item.addEventListener('click', function (e) {
@@ -18124,7 +18132,8 @@ var modals = function modals() {
         }); //open modal
 
         modal.style.display = "block";
-        document.body.style.overflow = "hidden"; // document.body.classList.add('modal-open');
+        document.body.style.overflow = "hidden";
+        document.body.style.marginRight = "".concat(scroll, "px"); // document.body.classList.add('modal-open');
       });
     }); //end CLICK ON TRIGGER
     //CLICK ON CROSS - CLOSE MODAL
@@ -18135,7 +18144,8 @@ var modals = function modals() {
         item.style.display = 'none';
       });
       modal.style.display = "none";
-      document.body.style.overflow = ""; // document.body.classList.remove('modal-open');
+      document.body.style.overflow = "";
+      document.body.style.marginRight = "0px"; // document.body.classList.remove('modal-open');
     }); //CLICK ON SUBSTRATE - CLOSE MODAL
 
     modal.addEventListener('click', function (e) {
@@ -18145,7 +18155,8 @@ var modals = function modals() {
           item.style.display = 'none';
         });
         modal.style.display = "none";
-        document.body.style.overflow = ""; // document.body.classList.remove('modal-open');
+        document.body.style.overflow = "";
+        document.body.style.marginRight = "0px"; // document.body.classList.remove('modal-open');
       }
     }); //end event click
   } //end bindModal
@@ -18156,6 +18167,18 @@ var modals = function modals() {
       document.querySelector(selector).style.display = 'block';
       document.body.style.overflow = "hidden";
     }, time);
+  }
+
+  function calcScroll() {
+    var div = document.createElement('div');
+    div.style.width = '50px';
+    div.style.height = '50px';
+    div.style.overflowY = 'scroll';
+    div.style.visibility = 'hidden';
+    document.body.appendChild(div);
+    var scrollWidth = div.offsetWidth - div.clientWidth;
+    div.remove();
+    return scrollWidth;
   } //call function bindModal
 
 
